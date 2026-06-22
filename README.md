@@ -35,8 +35,16 @@ src/
 │  ├─ brand/   Icons.tsx, Logo.tsx
 │  ├─ layout/  Navbar.tsx, Footer.tsx
 │  └─ sections/ Hero, TrustBar, Bestseller, Products, Story, Reviews, Newsletter
+├─ landing/FrostyLanding.tsx   # dedizierte Ad-Landingpage (Hero-Produkt)
 business/                      # Geschäfts-Playbook (siehe README dort)
 ```
+
+### Seiten (Multi-Page)
+
+| URL | Datei | Zweck |
+|---|---|---|
+| `/` | `index.html` → `src/App.tsx` | Marken-Startseite (Shop-Übersicht) |
+| `/frosty.html` | `frosty.html` → `src/landing/FrostyLanding.tsx` | Conversion-Landingpage fürs Hero-Produkt (für bezahlte Ads): Advertorial, Bundle-Auswahl, Garantie, FAQ, Sticky-CTA |
 
 ## Design-System „Treuherz" (warm & trust)
 

@@ -69,10 +69,10 @@ export function Bestseller() {
               </span>
             </div>
             <a
-              href="#shop"
+              href="/frosty.html"
               className="group inline-flex items-center gap-2 rounded-full bg-terra px-8 py-3.5 font-sans text-sm font-bold text-cream transition-colors hover:bg-terra-deep"
             >
-              In den Warenkorb
+              Zum Angebot
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
           </div>
