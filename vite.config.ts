@@ -15,6 +15,7 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, 'index.html'),
         frosty: path.resolve(__dirname, 'frosty.html'),
+        legal: path.resolve(__dirname, 'rechtliches.html'),
       },
     },
   },

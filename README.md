@@ -45,6 +45,7 @@ business/                      # Geschäfts-Playbook (siehe README dort)
 |---|---|---|
 | `/` | `index.html` → `src/App.tsx` | Marken-Startseite (Shop-Übersicht) |
 | `/frosty.html` | `frosty.html` → `src/landing/FrostyLanding.tsx` | Conversion-Landingpage fürs Hero-Produkt (für bezahlte Ads): Advertorial, Bundle-Auswahl, Garantie, FAQ, Sticky-CTA |
+| `/rechtliches.html` | `rechtliches.html` → `src/legal/Legal.tsx` | Rechtsseiten: Impressum, Datenschutz, AGB, Widerruf (Vorlagen mit markierten Platzhaltern — vor Go-live anpassen & prüfen lassen) |
 
 ## Design-System „Treuherz" (warm & trust)
 

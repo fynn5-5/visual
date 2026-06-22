@@ -3,15 +3,30 @@ import { Logo } from "@/components/brand/Logo"
 const columns = [
   {
     title: "Shop",
-    links: ["Bestseller", "Für Hunde", "Für Katzen", "Sommer-Aktion", "Gutscheine"],
+    links: [
+      { label: "Bestseller", href: "/#bestseller" },
+      { label: "Für Hunde", href: "/#shop" },
+      { label: "Für Katzen", href: "/#shop" },
+      { label: "Sommer-Aktion", href: "/frosty.html" },
+    ],
   },
   {
     title: "Service",
-    links: ["Versand & Lieferzeit", "Rückgabe & Umtausch", "Zahlungsarten", "FAQ", "Kontakt"],
+    links: [
+      { label: "Versand & Lieferzeit", href: "/#story" },
+      { label: "Rückgabe & Umtausch", href: "/rechtliches.html#widerruf" },
+      { label: "Zahlungsarten", href: "/#shop" },
+      { label: "FAQ", href: "/frosty.html#angebot" },
+    ],
   },
   {
     title: "Rechtliches",
-    links: ["Impressum", "Datenschutz", "AGB", "Widerrufsrecht", "Cookie-Einstellungen"],
+    links: [
+      { label: "Impressum", href: "/rechtliches.html#impressum" },
+      { label: "Datenschutz", href: "/rechtliches.html#datenschutz" },
+      { label: "AGB", href: "/rechtliches.html#agb" },
+      { label: "Widerrufsrecht", href: "/rechtliches.html#widerruf" },
+    ],
   },
 ]
 
@@ -45,12 +60,12 @@ export function Footer() {
               </h3>
               <ul className="mt-4 space-y-2.5">
                 {col.links.map((link) => (
-                  <li key={link}>
+                  <li key={link.label}>
                     <a
-                      href="#"
+                      href={link.href}
                       className="text-sm text-cream/75 transition-colors hover:text-terra"
                     >
-                      {link}
+                      {link.label}
                     </a>
                   </li>
                 ))}

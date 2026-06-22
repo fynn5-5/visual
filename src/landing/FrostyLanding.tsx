@@ -379,7 +379,11 @@ export function FrostyLanding() {
         <Logo tone="cream" className="justify-center" />
         <p className="mt-3">
           &copy; {new Date().getFullYear()} Treuherz ·{" "}
-          <a href="/" className="underline hover:text-terra">Zur Startseite</a> · Impressum · Datenschutz · AGB · Widerruf
+          <a href="/" className="underline hover:text-terra">Startseite</a> ·{" "}
+          <a href="/rechtliches.html#impressum" className="underline hover:text-terra">Impressum</a> ·{" "}
+          <a href="/rechtliches.html#datenschutz" className="underline hover:text-terra">Datenschutz</a> ·{" "}
+          <a href="/rechtliches.html#agb" className="underline hover:text-terra">AGB</a> ·{" "}
+          <a href="/rechtliches.html#widerruf" className="underline hover:text-terra">Widerruf</a>
         </p>
         <p className="mt-2 text-cream/40">Mit ♥ für Vierbeiner gemacht.</p>
       </footer>
