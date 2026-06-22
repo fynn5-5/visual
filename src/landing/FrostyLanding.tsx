@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { Logo } from "@/components/brand/Logo"
+import { SleepingDog, FrostAccents } from "@/components/brand/Illustrations"
 import {
   Star,
   Check,
@@ -50,7 +51,8 @@ function ProductVisual({ className = "" }: { className?: string }) {
       style={{ background: "linear-gradient(145deg,#cfe3ef 0%,#9fc4d8 100%)" }}
     >
       <div className="absolute inset-0 bg-grain opacity-60" />
-      <Snowflake className="absolute left-1/2 top-1/2 h-36 w-36 -translate-x-1/2 -translate-y-1/2 text-cream/90 animate-float-soft" />
+      <FrostAccents className="absolute right-5 top-5 h-14 w-14 text-cream/70" />
+      <SleepingDog className="absolute bottom-0 left-1/2 w-[84%] -translate-x-1/2 translate-y-[5%] text-cream/95 animate-float-soft" />
       <span className="absolute left-4 top-4 rounded-full bg-cream/90 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-terra-deep">
         Sommer-Sale −30 %
       </span>

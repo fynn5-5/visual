@@ -1,4 +1,5 @@
 import { ArrowRight, Check, Star } from "@/components/brand/Icons"
+import { SleepingDog, FrostAccents } from "@/components/brand/Illustrations"
 import { heroProduct } from "@/data/products"
 
 export function Bestseller() {
@@ -12,7 +13,8 @@ export function Bestseller() {
           style={{ background: p.gradient }}
         >
           <div className="absolute inset-0 bg-grain opacity-60" />
-          <p.icon className="absolute left-1/2 top-1/2 h-44 w-44 -translate-x-1/2 -translate-y-1/2 text-cream/90" />
+          <FrostAccents className="absolute right-6 top-6 h-16 w-16 text-cream/70" />
+          <SleepingDog className="absolute bottom-0 left-1/2 w-[82%] -translate-x-1/2 translate-y-[4%] text-cream/95" />
           <div className="absolute bottom-6 left-6 rounded-2xl bg-cream/90 px-4 py-3 backdrop-blur">
             <p className="font-mono text-[11px] uppercase tracking-wider text-terra-deep">
               Sommer-Liebling 2026

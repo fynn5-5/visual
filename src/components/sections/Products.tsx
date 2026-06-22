@@ -1,13 +1,18 @@
 import { ArrowRight } from "@/components/brand/Icons"
+import { SleepingDog, RestingCat } from "@/components/brand/Illustrations"
 import { products, type Product } from "@/data/products"
 
 function ProductCard({ product }: { product: Product }) {
   const Icon = product.icon
+  const Art = product.art === "cat" ? RestingCat : SleepingDog
   return (
     <article className="group flex flex-col overflow-hidden rounded-3xl border border-sand-deep bg-card transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_24px_44px_-26px_rgba(43,39,36,0.4)]">
       <div className="relative aspect-[5/4] overflow-hidden" style={{ background: product.gradient }}>
         <div className="absolute inset-0 bg-grain opacity-60" />
-        <Icon className="absolute left-1/2 top-1/2 h-24 w-24 -translate-x-1/2 -translate-y-1/2 text-cream/90 transition-transform duration-300 group-hover:scale-110" />
+        <Art className="absolute bottom-0 left-1/2 w-[78%] -translate-x-1/2 translate-y-[6%] text-cream/95 transition-transform duration-300 group-hover:scale-[1.04]" />
+        <span className="absolute right-4 bottom-4 flex h-9 w-9 items-center justify-center rounded-full bg-cream/90 text-terra-deep shadow-sm">
+          <Icon className="h-5 w-5" />
+        </span>
         {product.badge && (
           <span className="absolute left-4 top-4 rounded-full bg-cream/90 px-3 py-1 font-mono text-[10px] uppercase tracking-wider text-terra-deep">
             {product.badge}

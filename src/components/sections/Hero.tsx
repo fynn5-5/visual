@@ -1,4 +1,5 @@
 import { ArrowRight, Star, Truck, Shield } from "@/components/brand/Icons"
+import { SleepingDog } from "@/components/brand/Illustrations"
 import { heroProduct } from "@/data/products"
 
 export function Hero() {
@@ -77,7 +78,7 @@ export function Hero() {
             style={{ background: heroProduct.gradient }}
           >
             <div className="absolute inset-0 bg-grain opacity-60" />
-            <heroProduct.icon className="absolute left-1/2 top-1/2 h-40 w-40 -translate-x-1/2 -translate-y-1/2 text-cream/90 animate-float-soft" />
+            <SleepingDog className="absolute bottom-0 left-1/2 w-[82%] -translate-x-1/2 translate-y-[5%] text-cream/95 animate-float-soft" />
 
             <div className="absolute left-5 top-5 rounded-full bg-cream/90 px-3 py-1 font-mono text-[11px] uppercase tracking-wider text-terra-deep">
               {heroProduct.badge}

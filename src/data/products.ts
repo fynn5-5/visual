@@ -15,6 +15,8 @@ export interface Product {
   /** visual gradient for the product card */
   gradient: string
   icon: ComponentType<SVGProps<SVGSVGElement>>
+  /** which hand-drawn brand illustration to show */
+  art: "dog" | "cat"
 }
 
 export const products: Product[] = [
@@ -35,6 +37,7 @@ export const products: Product[] = [
     badge: "Bestseller",
     gradient: "linear-gradient(145deg,#cfe3ef 0%,#9fc4d8 100%)",
     icon: Snowflake,
+    art: "dog",
   },
   {
     id: "trinkbrunnen",
@@ -52,6 +55,7 @@ export const products: Product[] = [
     pet: "Hund & Katze",
     gradient: "linear-gradient(145deg,#dceee0 0%,#a9cdb2 100%)",
     icon: Droplet,
+    art: "cat",
   },
   {
     id: "anti-schling-napf",
@@ -69,6 +73,7 @@ export const products: Product[] = [
     pet: "Hund",
     gradient: "linear-gradient(145deg,#f3e6d4 0%,#e0c39a 100%)",
     icon: Bowl,
+    art: "dog",
   },
   {
     id: "kuschelbett",
@@ -87,6 +92,7 @@ export const products: Product[] = [
     badge: "Liebling der Redaktion",
     gradient: "linear-gradient(145deg,#f6ddd2 0%,#e3a98f 100%)",
     icon: Bed,
+    art: "cat",
   },
   {
     id: "schnueffelspiel",
@@ -104,6 +110,7 @@ export const products: Product[] = [
     pet: "Hund & Katze",
     gradient: "linear-gradient(145deg,#e7e3f1 0%,#bdb1dd 100%)",
     icon: Sparkle,
+    art: "dog",
   },
   {
     id: "leuchthalsband",
@@ -122,6 +129,7 @@ export const products: Product[] = [
     badge: "Herbst-Favorit",
     gradient: "linear-gradient(145deg,#e9e3d6 0%,#d8c08c 100%)",
     icon: Bolt,
+    art: "cat",
   },
 ]
 
