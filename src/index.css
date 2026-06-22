@@ -36,13 +36,6 @@
   font-display: swap;
 }
 @font-face {
-  font-family: "Instrument Sans";
-  src: url("/fonts/InstrumentSans-BoldItalic.ttf") format("truetype");
-  font-weight: 700;
-  font-style: italic;
-  font-display: swap;
-}
-@font-face {
   font-family: "Geist Mono";
   src: url("/fonts/GeistMono-Regular.ttf") format("truetype");
   font-weight: 400;
@@ -57,17 +50,29 @@
   font-display: swap;
 }
 
+/* ── Treuherz · Brand Design System (warm & trust) ───────────────── */
 @theme {
   --font-serif: "Instrument Serif", Georgia, serif;
   --font-sans: "Instrument Sans", system-ui, sans-serif;
   --font-mono: "Geist Mono", ui-monospace, monospace;
 
-  --color-void-black: #0A0A0B;
-  --color-void-surface: #141416;
-  --color-void-muted: #27272A;
-  --color-void-text: #FAFAF9;
-  --color-void-accent: #C8B8FF;
-  --color-void-accent-hover: #A78BFA;
+  --color-cream: #faf6f0;        /* page background        */
+  --color-sand: #f1e8dc;         /* soft surface           */
+  --color-sand-deep: #e6d8c5;    /* borders / dividers     */
+  --color-card: #ffffff;         /* cards                  */
+
+  --color-ink: #2b2724;          /* primary text           */
+  --color-ink-soft: #6b6259;     /* muted text             */
+
+  --color-terra: #e07856;        /* primary / CTA          */
+  --color-terra-deep: #c75d3c;   /* CTA hover              */
+  --color-terra-tint: #f6ddd2;   /* terra wash             */
+
+  --color-sage: #7c9a82;         /* secondary accent       */
+  --color-sage-deep: #3f6b4c;    /* trust / success        */
+  --color-sage-tint: #e2ebe2;    /* sage wash              */
+
+  --color-honey: #e6b15e;        /* warm highlight (stars) */
 }
 
 @layer base {
@@ -85,30 +90,27 @@
   body {
     font-family: var(--font-sans);
     font-size: 16px;
-    line-height: 1.5;
-    color: var(--color-void-text);
-    background-color: var(--color-void-black);
+    line-height: 1.55;
+    color: var(--color-ink);
+    background-color: var(--color-cream);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
 
   ::selection {
-    background-color: var(--color-void-accent);
-    color: var(--color-void-black);
+    background-color: var(--color-terra);
+    color: var(--color-cream);
   }
 
   a {
-    color: var(--color-void-accent);
+    color: inherit;
     text-decoration: none;
-    transition: color 200ms ease-out;
-  }
-  a:hover {
-    color: var(--color-void-accent-hover);
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-void-accent);
-    outline-offset: 2px;
+    outline: 2px solid var(--color-terra);
+    outline-offset: 3px;
+    border-radius: 2px;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -118,5 +120,25 @@
       transition-duration: 0.01ms !important;
       scroll-behavior: auto !important;
     }
+  }
+}
+
+@layer utilities {
+  @keyframes float-soft {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-10px); }
+  }
+  .animate-float-soft { animation: float-soft 6s ease-in-out infinite; }
+
+  @keyframes rise-in {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-rise-in { animation: rise-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) both; }
+
+  /* subtle paper grain for warmth */
+  .bg-grain {
+    background-image: radial-gradient(rgba(43, 39, 36, 0.035) 1px, transparent 1px);
+    background-size: 4px 4px;
   }
 }

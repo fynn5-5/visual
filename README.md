@@ -1,73 +1,57 @@
-# React + TypeScript + Vite
+# 🐾 Treuherz
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Marken-Landingpage für **Treuherz** – durchdachtes Zubehör für Hund & Katze
+(AI-Dropshipping, Pet-Nische, DACH). Eigenständiges Projekt, gebaut mit
+React 19 + Vite + Tailwind v4.
 
-Currently, two official plugins are available:
+> Das vollständige Geschäfts-Playbook (Strategie, Produktrecherche, Shopify-Setup,
+> Marketing, Recht, Ad-Scripts, KPI-Sheet) liegt im Ordner [`business/`](./business/README.md).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Tech-Stack
 
-## React Compiler
+- **React 19** + **TypeScript**
+- **Vite 8** (Dev-Server & Build)
+- **Tailwind CSS v4** (Design-Tokens in `src/index.css`, `@theme`)
+- Eigene Inline-SVG-Icons (keine Icon-Library-Abhängigkeit)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Entwicklung
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+npm run dev      # Dev-Server (http://localhost:5173)
+npm run build    # Production-Build (tsc + vite)
+npm run lint     # ESLint
+npm run preview  # Build lokal ansehen
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Projektstruktur
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
+src/
+├─ App.tsx                     # Seiten-Komposition
+├─ index.css                   # Design-System (Farben, Fonts, Utilities)
+├─ data/products.ts            # Produktkatalog (6 Produkte + Texte)
+├─ components/
+│  ├─ brand/   Icons.tsx, Logo.tsx
+│  ├─ layout/  Navbar.tsx, Footer.tsx
+│  └─ sections/ Hero, TrustBar, Bestseller, Products, Story, Reviews, Newsletter
+business/                      # Geschäfts-Playbook (siehe README dort)
+```
+
+## Design-System „Treuherz" (warm & trust)
+
+| Token | Farbe | Einsatz |
+|---|---|---|
+| `terra` | `#E07856` | Primär / CTA |
+| `sage` / `sage-deep` | `#7C9A82` / `#3F6B4C` | Sekundär / Trust |
+| `cream` / `sand` | `#FAF6F0` / `#F1E8DC` | Hintergründe |
+| `ink` / `ink-soft` | `#2B2724` / `#6B6259` | Text |
+
+Fonts: Instrument Serif (Headlines), Instrument Sans (Text), Geist Mono (Labels).
+
+## Hinweis
+
+Diese Landingpage ist das Marken-Frontend. Shop, Warenkorb, Checkout & Zahlung
+laufen über **Shopify** (siehe `business/03-shopify-setup.md`). Die „In den
+Warenkorb"-Buttons sind aktuell Platzhalter (`#shop`) und werden mit dem
+Shopify-Buy-Button bzw. der Storefront verlinkt.

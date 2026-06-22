@@ -15,6 +15,11 @@ Dein kompletter Fahrplan vom Konzept bis zum Launch. Nische: **Haustier-Zubehör
 | 5 | [`05-marketing-ai-content.md`](./05-marketing-ai-content.md) | Ad-Strategie, AI-Prompts (Bild/Video/Text), Content-Plan | laufend |
 | 6 | [`06-recht-dsgvo.md`](./06-recht-dsgvo.md) | Impressum, DSGVO, AGB, Widerruf, VerpackG, Steuern | 1 Tag |
 | 7 | [`07-launch-checkliste.md`](./07-launch-checkliste.md) | Komplette Checkliste, Budget, KPIs, 30-Tage-Plan | — |
+| 8 | [`08-produkttexte.md`](./08-produkttexte.md) | Shop-fertige Verkaufstexte für alle 6 Produkte (+ Meta) | — |
+| 9 | [`09-ad-scripts.md`](./09-ad-scripts.md) | 5 fertige Video-Ad-Scripts für das Hero-Produkt | — |
+| 📊 | [`kpi-tracking.csv`](./kpi-tracking.csv) | KPI-Tracking-Tabelle (Import in Excel/Sheets) inkl. Formeln | — |
+
+> 💻 Zusätzlich liegt im Repo eine **fertige Marken-Landingpage** (React/Vite, Design-System „Treuherz") — siehe Haupt-[`README.md`](../README.md). Start mit `npm run dev`.
 
 ## 🎯 Das Geschäftsmodell in einem Satz
 
